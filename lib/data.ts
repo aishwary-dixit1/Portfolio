@@ -45,7 +45,7 @@ export const USER = {
     { name: "GitHub", url: "https://github.com/aishwary-dixit1", icon: Github },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/aishwary-dixit/", icon: Linkedin },
     { name: "Email", url: "mailto:mr.dixit17@gmail.com", icon: Mail },
-    { name: "Resume", url: "https://drive.google.com/file/d/1xTTk_x9fPDpnD_-UOHki5Bg8nHWKNm2E/view?usp=sharing", icon: FileText }
+    { name: "Resume", url: "https://drive.google.com/file/d/11w7U98YQRFxlfUkFAPfdbwBjssPFTuLn/view?usp=sharing", icon: FileText }
   ],
   
   projects: [
