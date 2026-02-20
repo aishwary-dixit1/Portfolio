@@ -37,15 +37,15 @@ export const USER = {
 
   codingProfiles: [
     { name: "LeetCode", url: "https://leetcode.com/u/aishwary_dixit/", rating: "Knight (1858)", solved: "300+", color: "text-yellow-500" },
-    { name: "CodeChef", url: "https://www.codechef.com/users/aishwarydixit", rating: "3★ (1736)", solved: "200+", color: "text-orange-500" },
-    { name: "Codeforces", url: "https://codeforces.com/profile/4O4_stillnotfound", rating: "Pupil", solved: "40+", color: "text-blue-500" },
+    { name: "CodeChef", url: "https://www.codechef.com/users/aishwarydixit", rating: "3★ (1764)", solved: "200+", color: "text-orange-500" },
+    { name: "Codeforces", url: "https://codeforces.com/profile/4O4_stillnotfound", rating: "Pupil (1247)", solved: "40+", color: "text-blue-500" },
   ],
 
   socials: [
     { name: "GitHub", url: "https://github.com/aishwary-dixit1", icon: Github },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/aishwary-dixit/", icon: Linkedin },
     { name: "Email", url: "mailto:mr.dixit17@gmail.com", icon: Mail },
-    { name: "Resume", url: "https://drive.google.com/file/d/11w7U98YQRFxlfUkFAPfdbwBjssPFTuLn/view?usp=sharing", icon: FileText }
+    { name: "Resume", url: "https://drive.google.com/file/d/11MWaYb0eOMJmfN10oK5hgSIkUY1Xf942/view?usp=sharing", icon: FileText }
   ],
   
   projects: [
