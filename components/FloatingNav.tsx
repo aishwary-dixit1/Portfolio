@@ -1,13 +1,15 @@
 "use client";
 import { motion } from 'framer-motion';
-import { Home, User, Briefcase, Mail, Cpu, Trophy } from 'lucide-react';
+import { Home, User, Briefcase, Mail, Cpu, Trophy, Building2, Medal } from 'lucide-react';
 
 const navItems = [
   { id: 'home', icon: Home, label: 'Home' },
   { id: 'about', icon: User, label: 'About' },
-  { id: 'skills', icon: Cpu, label: 'Skills' }, // New
+  { id: 'skills', icon: Cpu, label: 'Skills' },
+  { id: 'experience', icon: Building2, label: 'Experience' },
   { id: 'work', icon: Briefcase, label: 'Work' },
-  { id: 'profiles', icon: Trophy, label: 'Profiles' }, // New
+  { id: 'profiles', icon: Trophy, label: 'Profiles' },
+  { id: 'achievements', icon: Medal, label: 'Achievements' },
   { id: 'contact', icon: Mail, label: 'Contact' },
 ];
 

@@ -1,7 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from 'framer-motion';
 import { USER } from '@/lib/data';
-import { ArrowUpRight, Github, ExternalLink, Code, Database, Users, Mail, Cpu, Terminal, Layers, MapPin, GraduationCap } from 'lucide-react';
+import { ArrowUpRight, Github, ExternalLink, Code, Users, Mail, Cpu, Terminal, Layers, MapPin, GraduationCap, Award, FileText } from 'lucide-react';
 import FloatingNav from '@/components/FloatingNav';
 import { useState } from 'react';
 
@@ -22,7 +22,7 @@ const stagger = {
 // --- Components ---
 
 // 1. Social Link with Pop-up Tooltip
-function SocialLink({ social }: { social: any }) {
+function SocialLink({ social }: { social: (typeof USER.socials)[number] }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -77,8 +77,8 @@ const SkillStream = ({
   return (
     <div className="flex overflow-hidden relative z-0 w-full mask-gradient py-2">
       {/* Mask to fade edges */}
-      <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10" />
-      <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10" />
+      <div className="absolute inset-y-0 left-0 w-16 bg-linear-to-r from-[#0a0a0a] to-transparent z-10" />
+      <div className="absolute inset-y-0 right-0 w-16 bg-linear-to-l from-[#0a0a0a] to-transparent z-10" />
       
       <motion.div 
         className="flex gap-4 whitespace-nowrap"
@@ -102,8 +102,12 @@ const SkillStream = ({
 export default function Portfolio() {
   // Flatten skills for the stream
   const languages = USER.skills.find(s => s.category === "Languages")?.items || [];
-  const backend = USER.skills.find(s => s.category === "Backend & DB")?.items || [];
-  const tools = [...(USER.skills.find(s => s.category === "Tools & DevOps")?.items || []), ...(USER.skills.find(s => s.category === "Concepts")?.items || [])];
+  const backend = USER.skills.find(s => s.category === "Backend & Frameworks")?.items || [];
+  const tools = [
+    ...(USER.skills.find(s => s.category === "Cloud & DevOps")?.items || []),
+    ...(USER.skills.find(s => s.category === "Databases & Messaging")?.items || []),
+    ...(USER.skills.find(s => s.category === "Concepts")?.items || [])
+  ];
 
   return (
     <main className="min-h-screen relative px-6 md:px-12 pb-32 max-w-5xl mx-auto text-white selection:bg-blue-500/30 overflow-x-hidden">
@@ -128,8 +132,8 @@ export default function Portfolio() {
           </motion.div>
           
           <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-            <span className="text-white">Hello, I'm </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+            <span className="text-white">Hello, I am </span>
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-400">
               {USER.name}.
             </span>
           </motion.h1>
@@ -159,20 +163,20 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="md:col-span-2 space-y-4 text-white/70 leading-relaxed">
                 <p>
-                  I’m Aishwary Dixit , a software engineer at <strong className="text-white">IIIT Ranchi</strong> (GPA 8.94)  who thrives at the intersection of complex architecture and community building.
+                  I am Aishwary Dixit, a Computer Science undergraduate at <strong className="text-white">IIIT Ranchi</strong> (CGPA 8.85/10), focused on building scalable and reliable software systems.
                 </p>
                 <p>
-                  I specialize in Backend Engineering and Distributed Systems. My recent work involves building fault-tolerant systems using Node.js, Redis, and RabbitMQ , including a self-healing microservice architecture that recovers 100% of unpaid order inventory automatically.
+                  I specialize in backend engineering and distributed systems. My recent work includes secure payment infrastructure with Spring Boot and Razorpay, event-driven architecture, and fault-tolerant queue-based workflows.
                 </p>
                 <p>
-                  Beyond the code, I lead the <strong className="text-white">Google Developer Groups on Campus (GDGoC)</strong> chapter at my university. I’m dedicated to bridging the gap between academic theory and industry-scale application by organizing hackathons and workshops for 550+ peers.
+                  Beyond engineering, I lead the <strong className="text-white">Google Developer Groups on Campus (GDGoC)</strong> chapter at my university, where I help drive workshops, hackathons, and practical learning for 550+ students.
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-4">
                  <div className="p-4 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-4">
                     <div className="p-3 bg-blue-500/20 rounded-xl text-blue-400"><Code size={24}/></div>
                     <div>
-                      <h4 className="font-bold text-white">8.94</h4>
+                      <h4 className="font-bold text-white">8.85</h4>
                       <p className="text-xs text-white/50">CGPA (out of 10)</p>
                     </div>
                  </div>
@@ -232,6 +236,70 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section id="experience" className="py-20">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold mb-10"
+        >
+          Experience
+        </motion.h2>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          variants={stagger}
+          className="space-y-6"
+        >
+          {USER.experience.map((exp, i) => (
+            <motion.article
+              key={i}
+              variants={fadeInUp}
+              className="glass-card rounded-3xl p-8 bg-white/5 border border-white/10"
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white shrink-0">
+                    <exp.icon size={22} />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{exp.title}</h3>
+                    <p className="text-white/70">{exp.company}</p>
+                    <p className="text-sm text-white/50 mt-1">{exp.location}</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-start md:items-end gap-3">
+                  <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-white/70">
+                    {exp.duration}
+                  </span>
+                  <a
+                    href={exp.recommendation}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-blue-300 hover:text-blue-200 transition-colors"
+                  >
+                    <FileText size={16} />
+                    View Recommendation Letter
+                  </a>
+                </div>
+              </div>
+
+              <ul className="space-y-3">
+                {exp.highlights.map((point) => (
+                  <li key={point} className="text-white/70 leading-relaxed flex items-start gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-blue-300/80 shrink-0" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.article>
+          ))}
+        </motion.div>
+      </section>
+
       {/* Projects Section */}
       <section id="work" className="py-20">
         <motion.h2 
@@ -285,6 +353,43 @@ export default function Portfolio() {
         </motion.div>
       </section>
 
+      {/* Achievements Section */}
+      <section id="achievements" className="py-20">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold mb-8"
+        >
+          Achievements
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {USER.achievements.map((achievement, i) => (
+            <motion.a
+              key={i}
+              href={achievement.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="glass-card p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all group"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">{achievement.title}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">{achievement.detail}</p>
+                </div>
+                <div className="p-2 rounded-xl bg-white/10 text-yellow-400 shrink-0">
+                  <Award size={18} />
+                </div>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+      </section>
+
       {/* Coding Profiles Section */}
       <section id="profiles" className="py-20">
         <motion.h2 
@@ -336,10 +441,10 @@ export default function Portfolio() {
         >
           <h2 className="text-4xl font-bold mb-6">Ready to collaborate?</h2>
           <p className="text-white/60 mb-8 mx-auto">
-            I'm currently looking for internship opportunities. If you need a robust backend engineer or a creative problem solver, let's talk.
+            I am currently looking for internship opportunities. If you need a robust backend engineer or a creative problem solver, let us talk.
           </p>
           <a 
-            href="mailto:your.email@iiitranchi.ac.in"
+            href="mailto:mr.dixit17@gmail.com"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors"
           >
             <Mail size={18} />

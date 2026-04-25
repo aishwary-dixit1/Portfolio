@@ -1,85 +1,102 @@
-import { Github, Linkedin, Mail, FileText, Code2, Terminal, Cpu, LayoutTemplate, Globe, Server, Database, Container, Wrench } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, Code2, Terminal, Cpu, Globe, Server, Database, Container, Trophy, BriefcaseBusiness } from "lucide-react";
 
 export const USER = {
   name: "Aishwary Dixit",
-  role: "Software Engineer & GDG Lead",
-  location: "Kanpur, India",
+  role: "Software Developer Engineer Intern | CSE Undergraduate",
+  location: "Ranchi, India",
   college: "IIIT Ranchi",
-  bio: "I build high-performance systems. Currently focused on backend architecture, distributed systems, and AI-driven platforms.",
+  bio: "I build resilient, high-performance backend systems and distributed architectures. Currently focused on scalable APIs, concurrency control, and event-driven platforms.",
   
   skills: [
     { 
       category: "Languages", 
-      items: ["C/C++", "Java", "Python", "JavaScript", "SQL", "Lua"],
+      items: ["Java", "C/C++", "TypeScript", "JavaScript", "Python", "SQL"],
       icon: Code2
     },
     { 
-      category: "Backend & DB", 
-      items: ["Node.js", "Redis", "RabbitMQ", "PostgreSQL", "MongoDB", "Socket.io"],
+      category: "Backend & Frameworks", 
+      items: ["Spring Boot", "Node.js", "Express.js", "React.js", "Redux"],
       icon: Database
     },
     { 
-      category: "Frameworks", 
-      items: ["React", "Express", "Redux"],
+      category: "Cloud & DevOps", 
+      items: ["AWS (EC2, S3, Lambda)", "Docker", "Git", "Linux"],
       icon: Globe
     },
     { 
-      category: "Tools & DevOps", 
-      items: ["Git/GitHub", "AWS", "Linux", "Postman", "Jest"],
+      category: "Databases & Messaging", 
+      items: ["PostgreSQL", "MongoDB", "Redis", "RabbitMQ", "Kafka"],
       icon: Container
     },
     { 
       category: "Concepts", 
-      items: ["System Design", "Microservices", "Distributed Systems", "Concurrency Control", "Object-Oriented Programming (OOP)", "Operating System Concepts", "DBMS", "Computer Networks"],
+      items: ["Distributed Systems", "Microservices", "Event-Driven Design", "Concurrency Control", "System Design", "Object-Oriented Programming (OOP)", "Data Structures & Algorithms"],
       icon: Server
     }
   ],
 
   codingProfiles: [
-    { name: "LeetCode", url: "https://leetcode.com/u/aishwary_dixit/", rating: "Knight (1858)", solved: "300+", color: "text-yellow-500" },
-    { name: "CodeChef", url: "https://www.codechef.com/users/aishwarydixit", rating: "3★ (1777)", solved: "200+", color: "text-orange-500" },
-    { name: "Codeforces", url: "https://codeforces.com/profile/4O4_stillnotfound", rating: "Pupil (1247)", solved: "40+", color: "text-blue-500" },
+    { name: "LeetCode", url: "https://leetcode.com/u/aishwary_dixit/", rating: "Knight (1964)", solved: "Top 3%", color: "text-yellow-500" },
+    { name: "CodeChef", url: "https://www.codechef.com/users/aishwarydixit", rating: "3★ (1777)", solved: "Global Rank 102", color: "text-orange-500" },
+    // { name: "AlgoUniversity", url: "https://d3uam8jk4sa4y4.cloudfront.net/static/certificates/atf_stage_1/aishwary-dixit.png", rating: "Top 20% Fellowship", solved: "20,000+ Participants", color: "text-blue-500" },
   ],
 
   socials: [
     { name: "GitHub", url: "https://github.com/aishwary-dixit1", icon: Github },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/aishwary-dixit/", icon: Linkedin },
-    { name: "Email", url: "mailto:aishdxt1@gmail.com", icon: Mail },
-    { name: "Resume", url: "https://drive.google.com/file/d/11MWaYb0eOMJmfN10oK5hgSIkUY1Xf942/view?usp=sharing", icon: FileText }
+    { name: "Email", url: "mailto:mr.dixit17@gmail.com", icon: Mail },
+    { name: "Resume", url: "https://drive.google.com/file/d/1go5vG-OBMprJmhp93Lncg64z4g4Agatu/view?usp=sharing", icon: FileText }
+  ],
+
+  experience: [
+    {
+      title: "Software Developer Engineer Intern",
+      company: "Syncliner Software Platforms Pvt. Ltd.",
+      duration: "Jun 2025 - Dec 2025",
+      location: "India",
+      icon: BriefcaseBusiness,
+      recommendation: "https://drive.google.com/file/d/1n302BEMrZZJ4ALXicUoZxeVhP5H8Fd_c/view?usp=sharing",
+      highlights: [
+        "Architected scalable Spring Boot REST APIs for secure payment processing and integrated Razorpay for high-concurrency transaction workflows.",
+        "Guaranteed ACID compliance and prevented duplicate payments using custom idempotency keys and transactional database locking.",
+        "Engineered an event-driven webhook architecture with the Factory Design Pattern and Firebase for real-time GitHub data synchronization.",
+        "Accelerated frontend delivery cycles by 60% with TypeScript + Redux Toolkit Query and decoupled testing via Mock Service Worker (MSW).",
+        "Ensured zero-regression deployments across 10+ production releases by introducing CI/CD quality gates and integration tests with 90% code coverage."
+      ]
+    }
   ],
   
   projects: [
     {
-      title: "Flash Sale Engine",
-      desc: "A high-concurrency distributed backend capable of handling 10,000+ requests with zero overselling. Built with Node.js, Redis (Lua Scripting) for atomic locking, and RabbitMQ (DLX) for automated inventory recovery.",
+      title: "CodeForge",
+      desc: "A distributed code execution engine supporting Python, Node.js, Java, and C++ with RabbitMQ job dispatch and hardened Docker sandboxes per submission.",
       icon: Cpu,
+      tech: ["Node.js", "Docker", "RabbitMQ", "PostgreSQL", "Redis"],
+      github: "https://github.com/aishwary-dixit1/CodeForge",
+      demo: "https://github.com/aishwary-dixit1/CodeForge"
+    },
+    {
+      title: "High-Concurrency Flash Sale Engine",
+      desc: "A fault-tolerant microservice backend with atomic Redis Lua semaphore locking, RabbitMQ DLX recovery, and stress-tested low-latency consistency under burst traffic.",
+      icon: Terminal,
       tech: ["Node.js", "Redis", "RabbitMQ", "Jest"],
       github: "https://github.com/aishwary-dixit1/Flash-Sale-Engine",
       demo: "https://github.com/aishwary-dixit1/Flash-Sale-Engine"
+    }
+  ],
+
+  achievements: [
+    {
+      title: "LeetCode Knight",
+      detail: "Peak rating of 1964, ranked in Top 3% globally.",
+      url: "https://leetcode.com/u/aishwary_dixit/",
+      icon: Trophy
     },
     {
-      title: "Web-Chat",
-      desc: "A real-time messaging web app for seamless communication. Features instant messaging, user authentication, media sharing, and a sleek, responsive UI. Powered by Node.js, React, Socket.io, and MongoDB for fast and secure conversations. ",
-      icon: Terminal,
-      tech: ["React", "Socket.io", "Node.js", "MongoDB", "JWT", "Render", "Express.js"],
-      github: "https://github.com/aishwary-dixit1/Web-Chat",
-      demo: "https://web-chat-4a1l.onrender.com/"
-    },
-    {
-      title: "Git-Match",
-      desc: "A Tinder-like matchmaking app for developers, helping coders connect based on skills, interests, and projects. Built with Node.js, Express.js, MongoDB, React, and JWT for seamless authentication and secure connections.",
-      icon: LayoutTemplate,
-      tech: ["React", "Socket.io", "Node.js", "MongoDB", "Redux", "JWT", "Express.js"],
-      github: "https://github.com/aishwary-dixit1/Git-Match",
-      demo: "https://github.com/aishwary-dixit1/Git-Match"
-    },
-    {
-      title: "FarmLink",
-      desc: "An Android app connecting farmers directly to consumers and retailers, eliminating middlemen. With features like Google Maps integration, real-time chat, and transparent pricing, it ensures fair trade and supports local agriculture.",
-      icon: Wrench,
-      tech: ["Kotlin", "Jetpack Compose", "Google Maps API", "Firebase", "MongoDB"],
-      github: "https://github.com/aishwary-dixit1/FarmLink",
-      demo: "https://github.com/aishwary-dixit1/FarmLink"
+      title: "CodeChef 3-Star",
+      detail: "Peak competitive rating of 1777 with Global Rank 102 in Starters 156.",
+      url: "https://www.codechef.com/users/aishwarydixit",
+      icon: Trophy
     }
   ]
 };
