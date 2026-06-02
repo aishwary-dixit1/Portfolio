@@ -37,7 +37,7 @@ export const USER = {
 
   codingProfiles: [
     { name: "LeetCode", url: "https://leetcode.com/u/aishwary_dixit/", rating: "Knight (1964)", solved: "Top 3%", color: "text-yellow-500" },
-    { name: "CodeChef", url: "https://www.codechef.com/users/aishwarydixit", rating: "3★ (1777)", solved: "Global Rank 102", color: "text-orange-500" },
+    { name: "CodeChef", url: "https://www.codechef.com/users/aishwarydixit", rating: "4★ (1802)", solved: "Global Rank 102", color: "text-orange-500" },
     // { name: "AlgoUniversity", url: "https://d3uam8jk4sa4y4.cloudfront.net/static/certificates/atf_stage_1/aishwary-dixit.png", rating: "Top 20% Fellowship", solved: "20,000+ Participants", color: "text-blue-500" },
   ],
 
@@ -45,7 +45,7 @@ export const USER = {
     { name: "GitHub", url: "https://github.com/aishwary-dixit1", icon: Github },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/aishwary-dixit/", icon: Linkedin },
     { name: "Email", url: "mailto:mr.dixit17@gmail.com", icon: Mail },
-    { name: "Resume", url: "https://drive.google.com/file/d/1go5vG-OBMprJmhp93Lncg64z4g4Agatu/view?usp=sharing", icon: FileText }
+    { name: "Resume", url: "https://drive.google.com/file/d/1_BUqhLBiuQp5pMPvluWHw6asmO06-tEL/view?usp=sharing", icon: FileText }
   ],
 
   experience: [
@@ -57,11 +57,11 @@ export const USER = {
       icon: BriefcaseBusiness,
       recommendation: "https://drive.google.com/file/d/1n302BEMrZZJ4ALXicUoZxeVhP5H8Fd_c/view?usp=sharing",
       highlights: [
-        "Architected scalable Spring Boot REST APIs for secure payment processing and integrated Razorpay for high-concurrency transaction workflows.",
-        "Guaranteed ACID compliance and prevented duplicate payments using custom idempotency keys and transactional database locking.",
-        "Engineered an event-driven webhook architecture with the Factory Design Pattern and Firebase for real-time GitHub data synchronization.",
-        "Accelerated frontend delivery cycles by 60% with TypeScript + Redux Toolkit Query and decoupled testing via Mock Service Worker (MSW).",
-        "Ensured zero-regression deployments across 10+ production releases by introducing CI/CD quality gates and integration tests with 90% code coverage."
+        "Architected scalable RESTful APIs using Spring Boot and JWT for secure authentication, integrating Razorpay to handle high-concurrency transaction workflows.",
+        "Guaranteed ACID compliance and prevented 100% of duplicate payments across distributed consumers by implementing custom idempotency keys and transactional database locking.",
+        "Engineered an event-driven webhook architecture using the Factory Design Pattern, authoring detailed system design documentation for real-time GitHub data synchronization.",
+        "Accelerated frontend development cycles by 60% by designing scalable state management with TypeScript + Redux Toolkit Query and decoupling testing via Mock Service Worker (MSW).",
+        "Collaborated in a Scrum environment and conducted peer code reviews while automating CI/CD quality gates using Istanbul (unit testing) and Playwright (E2E testing) to enforce 90% code coverage."
       ]
     }
   ],
@@ -93,8 +93,8 @@ export const USER = {
       icon: Trophy
     },
     {
-      title: "CodeChef 3-Star",
-      detail: "Peak competitive rating of 1777 with Global Rank 102 in Starters 156.",
+      title: "CodeChef 4-Star",
+      detail: "Peak competitive rating of 1802 with Global Rank 102 in Starters 156.",
       url: "https://www.codechef.com/users/aishwarydixit",
       icon: Trophy
     }
