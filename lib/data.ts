@@ -10,7 +10,7 @@ export const USER = {
   skills: [
     { 
       category: "Languages", 
-      items: ["Java", "C/C++", "TypeScript", "JavaScript", "Python", "SQL"],
+      items: ["Java", "C++", "TypeScript", "JavaScript", "Python", "SQL"],
       icon: Code2
     },
     { 
@@ -37,7 +37,7 @@ export const USER = {
 
   codingProfiles: [
     { name: "LeetCode", url: "https://leetcode.com/u/aishwary_dixit/", rating: "Knight (1964)", solved: "Top 3%", color: "text-yellow-500" },
-    { name: "CodeChef", url: "https://www.codechef.com/users/aishwarydixit", rating: "4★ (1802)", solved: "Global Rank 102", color: "text-orange-500" },
+    { name: "CodeChef", url: "https://www.codechef.com/users/aishwarydixit", rating: "4★ (1817)", solved: "Global Rank 102", color: "text-orange-500" },
     // { name: "AlgoUniversity", url: "https://d3uam8jk4sa4y4.cloudfront.net/static/certificates/atf_stage_1/aishwary-dixit.png", rating: "Top 20% Fellowship", solved: "20,000+ Participants", color: "text-blue-500" },
   ],
 
@@ -45,10 +45,23 @@ export const USER = {
     { name: "GitHub", url: "https://github.com/aishwary-dixit1", icon: Github },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/aishwary-dixit/", icon: Linkedin },
     { name: "Email", url: "mailto:mr.dixit17@gmail.com", icon: Mail },
-    { name: "Resume", url: "https://drive.google.com/file/d/1_BUqhLBiuQp5pMPvluWHw6asmO06-tEL/view?usp=sharing", icon: FileText }
+    { name: "Resume", url: "https://drive.google.com/file/d/1n5BK2RBYK0gNMh9kJ2JYWgRGRnRlrW-c/view?usp=sharing", icon: FileText }
   ],
 
   experience: [
+    {
+      title: "Full Stack Developer Intern",
+      company: "Nimble AI",
+      duration: "Jul 2026 - Present",
+      location: "India",
+      icon: BriefcaseBusiness,
+      highlights: [
+        "Designed, built, and deployed on AWS EC2 a low-latency Node.js redirect server that resolves inbound API hits to target URLs with near-zero delay while asynchronously logging click analytics to PostgreSQL",
+        "Architected an abandoned cart recovery system from scratch: verified HMAC webhook signatures from e-commerce platforms and enqueued payloads to RabbitMQ for immediate 200 acknowledgment",
+        "Built a RabbitMQ worker service to sequentially process queued cart events, persisting analytics to PostgreSQL and triggering the Meta WhatsApp Business API to recover abandoned carts",
+        "Collaborate cross-functionally through regular code reviews and system design discussions with the engineering team"
+      ]
+    },
     {
       title: "Software Developer Engineer Intern",
       company: "Syncliner Software Platforms Pvt. Ltd.",
@@ -57,12 +70,12 @@ export const USER = {
       icon: BriefcaseBusiness,
       recommendation: "https://drive.google.com/file/d/1n302BEMrZZJ4ALXicUoZxeVhP5H8Fd_c/view?usp=sharing",
       highlights: [
-        "Architected scalable RESTful APIs using Spring Boot and JWT for secure authentication, integrating Razorpay to handle high-concurrency transaction workflows.",
-        "Guaranteed ACID compliance and prevented 100% of duplicate payments across distributed consumers by implementing custom idempotency keys and transactional database locking.",
-        "Engineered an event-driven webhook architecture using the Factory Design Pattern, authoring detailed system design documentation for real-time GitHub data synchronization.",
-        "Accelerated frontend development cycles by 60% by designing scalable state management with TypeScript + Redux Toolkit Query and decoupling testing via Mock Service Worker (MSW).",
-        "Collaborated in a Scrum environment and conducted peer code reviews while automating CI/CD quality gates using Istanbul (unit testing) and Playwright (E2E testing) to enforce 90% code coverage."
-      ]
+        "Architected scalable RESTful APIs in Java using object-oriented design principles and Spring Boot with JWT for secure authentication, integrating Razorpay API to handle high-concurrency transaction workflows",
+        "Guaranteed ACID compliance and prevented 100% of duplicate payments across distributed consumers by implementing custom idempotency keys and transactional database locking",
+        "Engineered an event-driven webhook architecture using the Factory Design Pattern, authoring detailed system design documentation for real-time GitHub data synchronization and analytics",
+        "Migrated nested, loop-heavy MongoDB eligibility-search queries to Elasticsearch, restructuring multi-stage college/property/eligibility lookups into indexed queries to cut search latency by 91%",
+        "Accelerated frontend cycles by 60% with TypeScript + Redux Toolkit Query state management, decoupling testing via Mock Service Worker (MSW) and configured CI/CD quality gates to test on beta and used Istanbul(unit testing) and Playwright (E2E testing) gates to enforce 90% code coverage"
+      ] 
     }
   ],
   
