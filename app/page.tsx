@@ -163,7 +163,7 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="md:col-span-2 space-y-4 text-white/70 leading-relaxed">
                 <p>
-                  I am Aishwary Dixit, a Computer Science undergraduate at <strong className="text-white">IIIT Ranchi</strong> (CGPA 8.85/10), focused on building scalable and reliable software systems.
+                  I am Aishwary Dixit, a Computer Science undergraduate at <strong className="text-white">IIIT Ranchi</strong> (CGPA 8.83/10), focused on building scalable and reliable software systems.
                 </p>
                 <p>
                   I specialize in backend engineering and distributed systems. My recent work includes secure payment infrastructure with Spring Boot and Razorpay, event-driven architecture, and fault-tolerant queue-based workflows.
@@ -176,7 +176,7 @@ export default function Portfolio() {
                  <div className="p-4 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-4">
                     <div className="p-3 bg-blue-500/20 rounded-xl text-blue-400"><Code size={24}/></div>
                     <div>
-                      <h4 className="font-bold text-white">8.85</h4>
+                      <h4 className="font-bold text-white">8.83</h4>
                       <p className="text-xs text-white/50">CGPA (out of 10)</p>
                     </div>
                  </div>
@@ -275,7 +275,7 @@ export default function Portfolio() {
                   <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-white/70">
                     {exp.duration}
                   </span>
-                  <a
+                  {exp.recommendation && (<a
                     href={exp.recommendation}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -283,7 +283,7 @@ export default function Portfolio() {
                   >
                     <FileText size={16} />
                     View Recommendation Letter
-                  </a>
+                  </a>)}
                 </div>
               </div>
 
