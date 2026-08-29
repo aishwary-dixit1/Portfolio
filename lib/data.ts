@@ -45,7 +45,7 @@ export const USER = {
     { name: "GitHub", url: "https://github.com/aishwary-dixit1", icon: Github },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/aishwary-dixit/", icon: Linkedin },
     { name: "Email", url: "mailto:mr.dixit17@gmail.com", icon: Mail },
-    { name: "Resume", url: "https://drive.google.com/file/d/16mezOE-t-kmrSiEO00lgmowOAsa0iO-g/view?usp=sharing", icon: FileText }
+    { name: "Resume", url: "https://drive.google.com/file/d/1hR7CHHomXhocTv3Ltd08NY9FABXYCYNl/view?usp=sharing", icon: FileText }
   ],
 
   experience: [
@@ -92,7 +92,7 @@ export const USER = {
       title: "High-Concurrency Flash Sale Engine",
       desc: "A fault-tolerant microservice backend with atomic Redis Lua semaphore locking, RabbitMQ DLX recovery, and stress-tested low-latency consistency under burst traffic.",
       icon: Terminal,
-      tech: ["Node.js", "Redis", "RabbitMQ", "Jest"],
+      tech: ["Lua", "Node.js", "Redis", "RabbitMQ", "Jest"],
       github: "https://github.com/aishwary-dixit1/Flash-Sale-Engine",
       demo: "https://github.com/aishwary-dixit1/Flash-Sale-Engine"
     }
