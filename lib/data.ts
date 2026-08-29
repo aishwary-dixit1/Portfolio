@@ -9,8 +9,8 @@ export const USER = {
   
   skills: [
     { 
-      category: "Languages", 
-      items: ["Java", "C++", "TypeScript", "JavaScript", "Python", "SQL"],
+      category: "Programming Languages", 
+      items: ["Java", "C++", "C", "TypeScript", "JavaScript", "Python", "SQL"],
       icon: Code2
     },
     { 
@@ -45,7 +45,7 @@ export const USER = {
     { name: "GitHub", url: "https://github.com/aishwary-dixit1", icon: Github },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/aishwary-dixit/", icon: Linkedin },
     { name: "Email", url: "mailto:mr.dixit17@gmail.com", icon: Mail },
-    { name: "Resume", url: "https://drive.google.com/file/d/1n5BK2RBYK0gNMh9kJ2JYWgRGRnRlrW-c/view?usp=sharing", icon: FileText }
+    { name: "Resume", url: "https://drive.google.com/file/d/16mezOE-t-kmrSiEO00lgmowOAsa0iO-g/view?usp=sharing", icon: FileText }
   ],
 
   experience: [
