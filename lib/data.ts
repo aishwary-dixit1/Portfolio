@@ -9,7 +9,7 @@ export const USER = {
   
   skills: [
     { 
-      category: "Programming Languages", 
+      category: "Languages", 
       items: ["Java", "C++", "C", "TypeScript", "JavaScript", "Python", "SQL"],
       icon: Code2
     },
