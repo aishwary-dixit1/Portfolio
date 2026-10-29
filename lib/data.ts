@@ -45,36 +45,36 @@ export const USER = {
     { name: "GitHub", url: "https://github.com/aishwary-dixit1", icon: Github },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/aishwary-dixit/", icon: Linkedin },
     { name: "Email", url: "mailto:mr.dixit17@gmail.com", icon: Mail },
-    { name: "Resume", url: "https://drive.google.com/file/d/1hR7CHHomXhocTv3Ltd08NY9FABXYCYNl/view?usp=sharing", icon: FileText }
+    { name: "Resume", url: "https://drive.google.com/file/d/1ajfhZH-rbBFWS62MlYlhD41faZMXDDez/view?usp=sharing", icon: FileText }
   ],
 
   experience: [
     {
-      title: "Full Stack Developer Intern",
+      title: "Software Engineer Intern",
       company: "Nimble AI",
-      duration: "Jul 2026 - Present",
+      duration: "Jul 2026 - Sep 2026",
       location: "India",
       icon: BriefcaseBusiness,
       highlights: [
-        "Designed, built, and deployed on AWS EC2 a low-latency Node.js redirect server that resolves inbound API hits to target URLs with near-zero delay while asynchronously logging click analytics to PostgreSQL",
-        "Architected an abandoned cart recovery system from scratch: verified HMAC webhook signatures from e-commerce platforms and enqueued payloads to RabbitMQ for immediate 200 acknowledgment",
-        "Built a RabbitMQ worker service to sequentially process queued cart events, persisting analytics to PostgreSQL and triggering the Meta WhatsApp Business API to recover abandoned carts",
-        "Collaborate cross-functionally through regular code reviews and system design discussions with the engineering team"
+        "Architected a high-throughput Node.js link redirection microservice on AWS EC2, achieving 153+ RPS (9,300+ requests/min) under 100 concurrent virtual users with 0.00% error rate by decoupling HTTP redirects from async PostgreSQL click logging.",
+        "Engineered an event-driven Shopify abandoned cart recovery pipeline with stateless HMAC-SHA256 webhook verification, BullMQ/Redis delayed jobs, and Meta WhatsApp Cloud API messaging enforced by 24-hour Redis rate-limiting locks to eliminate notification fatigue.",
+        "Executed full-system stress testing across all microservices using Postman Performance Mode and Autocannon, validating 7,690+ combined requests/min with 111ms average latency (p95 156ms) and 0.00% failure rate while monitoring CPU and memory limits.",
+        "Built an asynchronous AI-powered communication layer using FastAPI, Python, and PostgreSQL, with RabbitMQ processing webhooks in under 200ms with WAMID deduplication, and a multi-provider LLM abstraction with dynamic tool calling for a real-time customer support AI agent."
       ]
     },
     {
-      title: "Software Developer Engineer Intern",
+      title: "Software Engineer Intern",
       company: "Syncliner Software Platforms Pvt. Ltd.",
       duration: "Jun 2025 - Dec 2025",
       location: "India",
       icon: BriefcaseBusiness,
       recommendation: "https://drive.google.com/file/d/1n302BEMrZZJ4ALXicUoZxeVhP5H8Fd_c/view?usp=sharing",
       highlights: [
-        "Architected scalable RESTful APIs in Java using object-oriented design principles and Spring Boot with JWT for secure authentication, integrating Razorpay API to handle high-concurrency transaction workflows",
-        "Guaranteed ACID compliance and prevented 100% of duplicate payments across distributed consumers by implementing custom idempotency keys and transactional database locking",
+        "Designed scalable RESTful APIs in Java using object-oriented design principles and Spring Boot with JWT for secure authentication, integrating Razorpay API to handle high-concurrency transaction workflows.",
+        "Ensured ACID-compliant payment handling and eliminated duplicate payments across distributed consumers by implementing custom idempotency keys and transactional database locking.",
         "Engineered an event-driven webhook architecture using the Factory Design Pattern, authoring detailed system design documentation for real-time GitHub data synchronization and analytics",
-        "Migrated nested, loop-heavy MongoDB eligibility-search queries to Elasticsearch, restructuring multi-stage college/property/eligibility lookups into indexed queries to cut search latency by 91%",
-        "Accelerated frontend cycles by 60% with TypeScript + Redux Toolkit Query state management, decoupling testing via Mock Service Worker (MSW) and configured CI/CD quality gates to test on beta and used Istanbul(unit testing) and Playwright (E2E testing) gates to enforce 90% code coverage"
+        "Migrated nested, loop-heavy MongoDB eligibility-search queries to Elasticsearch, restructuring multi-stage college/property/eligibility lookups into indexed queries to cut search latency by 91%.",
+        "Reduced frontend test/build cycle time using TypeScript + Redux Toolkit Query, decoupled testing via MSW, and enforced 90% code coverage through CI/CD gates using Istanbul and Playwright."
       ] 
     }
   ],
@@ -107,7 +107,7 @@ export const USER = {
     },
     {
       title: "CodeChef 4-Star",
-      detail: "Peak competitive rating of 1802 with Global Rank 102 in Starters 156.",
+      detail: "Peak competitive rating of 1817 with Global Rank 102 in Starters 156.",
       url: "https://www.codechef.com/users/aishwarydixit",
       icon: Trophy
     }
