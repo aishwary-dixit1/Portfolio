@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { USER } from '@/lib/data';
 import { ArrowUpRight, Github, ExternalLink, Code, Users, Mail, Cpu, Terminal, Layers, MapPin, GraduationCap, Award, FileText } from 'lucide-react';
 import FloatingNav from '@/components/FloatingNav';
+import CromoneShowcase from '@/components/CromoneShowcase';
 import { useState } from 'react';
 
 // --- Animation Variants ---
@@ -302,14 +303,48 @@ export default function Portfolio() {
 
       {/* Projects Section */}
       <section id="work" className="py-20">
-        <motion.h2 
-          initial={{ opacity: 0 }} 
-          whileInView={{ opacity: 1 }} 
+        <motion.div 
+          initial="hidden" 
+          whileInView="visible" 
           viewport={{ once: true }} 
-          className="text-3xl font-bold mb-12"
+          variants={stagger}
+          className="mb-10"
         >
-          Selected Work
-        </motion.h2>
+          <motion.div variants={fadeInUp} className="flex items-center gap-2 mb-2">
+            <span className="text-xs uppercase tracking-widest text-emerald-400 font-semibold flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              Featured Production Project
+            </span>
+          </motion.div>
+          <motion.h2 
+            variants={fadeInUp} 
+            className="text-3xl md:text-4xl font-bold tracking-tight text-white"
+          >
+            Selected Work & Live Deployments
+          </motion.h2>
+          <motion.p variants={fadeInUp} className="text-white/60 text-sm mt-2 max-w-2xl leading-relaxed">
+            Production web platforms, real-world client catalog deployments, and resilient backend systems.
+          </motion.p>
+        </motion.div>
+
+        {/* Live Website Window / TV Showcase */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="mb-14"
+        >
+          <CromoneShowcase />
+        </motion.div>
+
+        {/* Sub-heading for Core Systems Projects */}
+        <div className="flex items-center gap-4 mb-8">
+          <span className="text-xs uppercase tracking-wider font-semibold text-white/50">
+            Systems & Backend Engineering
+          </span>
+          <div className="h-px flex-1 bg-white/10" />
+        </div>
 
         <motion.div 
           initial="hidden" 

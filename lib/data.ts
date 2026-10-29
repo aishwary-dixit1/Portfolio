@@ -78,7 +78,21 @@ export const USER = {
       ] 
     }
   ],
-  
+  featuredProject: {
+    title: "Cromone Greens",
+    tagline: "B2B Electrical Components & Inventory Catalog",
+    desc: "A production B2B inventory catalog web application engineered for an electrical equipment supplier. Features 47+ indexed industrial components, category-based faceted filtering, real-time specifications, and an integrated quote inquiry pipeline.",
+    url: "https://cromone.com",
+    role: "Full-Stack Developer",
+    status: "Live in Production",
+    metrics: [
+      { label: "Catalog Items", value: "47+ Components" },
+      { label: "Deployment", value: "Vercel & Render" },
+      { label: "Workflow", value: "B2B Quote (RFQ)" },
+    ],
+    tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "REST API", "Vercel", "Render", "Cloudinary"],
+  },
+
   projects: [
     {
       title: "CodeForge",
