@@ -56,10 +56,10 @@ export const USER = {
       location: "India",
       icon: BriefcaseBusiness,
       highlights: [
-        "Architected a high-throughput Node.js link redirection microservice on AWS EC2, achieving 153+ RPS (9,300+ requests/min) under 100 concurrent virtual users with 0.00% error rate by decoupling HTTP redirects from async PostgreSQL click logging.",
-        "Engineered an event-driven Shopify abandoned cart recovery pipeline with stateless HMAC-SHA256 webhook verification, BullMQ/Redis delayed jobs, and Meta WhatsApp Cloud API messaging enforced by 24-hour Redis rate-limiting locks to eliminate notification fatigue.",
-        "Executed full-system stress testing across all microservices using Postman Performance Mode and Autocannon, validating 7,690+ combined requests/min with 111ms average latency (p95 156ms) and 0.00% failure rate while monitoring CPU and memory limits.",
-        "Built an asynchronous AI-powered communication layer using FastAPI, Python, and PostgreSQL, with RabbitMQ processing webhooks in under 200ms with WAMID deduplication, and a multi-provider LLM abstraction with dynamic tool calling for a real-time customer support AI agent."
+        "Architected a Node.js campaign link redirection microservice on AWS EC2, decoupling in-memory URL parameter parsing and redirects from queue-backed PostgreSQL click-logging sustaining 50,000+ requests/min (830+ RPS) at 25ms average latency (p90 40ms) via Autocannon load testing to prevent campaign click drop-offs.",
+        "Engineered an event-driven Shopify abandoned cart recovery pipeline using HMAC-SHA256 webhook verification and BullMQ/Redis, implementing a 30-minute sliding-window debounce keyed by checkout token to reschedule active carts and a 24-hour Redis cooldown lock to drop redundant webhooks pre-queue automating merchant revenue recovery via Meta WhatsApp Cloud API while preventing spam and wasted messaging spend.",
+        "Built an asynchronous AI customer support layer using FastAPI, Python, RabbitMQ, and PostgreSQL, enforcing Redis-backed WAMID idempotency (<200ms webhook ack) and a 5-message sliding context window to cut duplicate LLM token spend on webhook retries, with dynamic tool-calling for live order-tracking and policy queries.",
+        "Collaborated across Agile sprints via system design discussions, peer PR code reviews, and API documentation, while unblocking teammates on backend issues and leading a technical session on RAG architectures."
       ]
     },
     {
@@ -70,11 +70,10 @@ export const USER = {
       icon: BriefcaseBusiness,
       recommendation: "https://drive.google.com/file/d/1n302BEMrZZJ4ALXicUoZxeVhP5H8Fd_c/view?usp=sharing",
       highlights: [
-        "Designed scalable RESTful APIs in Java using object-oriented design principles and Spring Boot with JWT for secure authentication, integrating Razorpay API to handle high-concurrency transaction workflows.",
-        "Ensured ACID-compliant payment handling and eliminated duplicate payments across distributed consumers by implementing custom idempotency keys and transactional database locking.",
-        "Engineered an event-driven webhook architecture using the Factory Design Pattern, authoring detailed system design documentation for real-time GitHub data synchronization and analytics",
-        "Migrated nested, loop-heavy MongoDB eligibility-search queries to Elasticsearch, restructuring multi-stage college/property/eligibility lookups into indexed queries to cut search latency by 91%.",
-        "Reduced frontend test/build cycle time using TypeScript + Redux Toolkit Query, decoupled testing via MSW, and enforced 90% code coverage through CI/CD gates using Istanbul and Playwright."
+        "Designed secure payment REST APIs in Java and Spring Boot with JWT authentication and Razorpay API integration to power paid college-counseling subscription plans, automating end-to-end transaction lifecycle verification and webhook state synchronization.",
+        "Eliminated duplicate customer charges and payment race conditions during concurrent network retries by implementing custom idempotency keys and ACID-compliant transactional database locking across distributed consumers.",
+        "Slashed college-predictor API latency by 91% (from 60s to 5s) and eliminated gateway timeouts by migrating N+1 nested MongoDB rank-cutoff lookups across branches and categories into indexed Elasticsearch queries, pairing it with API pagination to shrink response payload sizes during peak JEE counseling traffic.",
+        "Accelerated frontend release velocity and eliminated flaky staging dependencies by decoupling API testing via Mock Service Worker (MSW) with TypeScript and RTK Query, enforcing 90% code coverage gates in CI/CD via Istanbul and Playwright to prevent production UI regressions."
       ] 
     }
   ],
